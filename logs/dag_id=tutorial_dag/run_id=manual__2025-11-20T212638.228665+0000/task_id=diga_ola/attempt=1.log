@@ -1,0 +1,22 @@
+[2025-11-20T21:26:41.308+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-20T21:26:41.554+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tutorial_dag.diga_ola manual__2025-11-20T21:26:38.228665+00:00 [queued]>
+[2025-11-20T21:26:41.582+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tutorial_dag.diga_ola manual__2025-11-20T21:26:38.228665+00:00 [queued]>
+[2025-11-20T21:26:41.586+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-20T21:26:41.638+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): diga_ola> on 2025-11-20 21:26:38.228665+00:00
+[2025-11-20T21:26:41.659+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'tutorial_dag', 'diga_ola', 'manual__2025-11-20T21:26:38.228665+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/tutorial_dag.py', '--cfg-path', '/tmp/tmpiutzekne']
+[2025-11-20T21:26:41.668+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1902) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-20T21:26:41.668+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask diga_ola
+[2025-11-20T21:26:41.669+0000] {standard_task_runner.py:64} INFO - Started process 1903 to run task
+[2025-11-20T21:26:41.810+0000] {task_command.py:426} INFO - Running <TaskInstance: tutorial_dag.diga_ola manual__2025-11-20T21:26:38.228665+00:00 [running]> on host 7232052e2db3
+[2025-11-20T21:26:42.053+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='tutorial_dag' AIRFLOW_CTX_TASK_ID='diga_ola' AIRFLOW_CTX_EXECUTION_DATE='2025-11-20T21:26:38.228665+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-20T21:26:38.228665+00:00'
+[2025-11-20T21:26:42.055+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-20T21:26:42.131+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-20T21:26:42.136+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'Olá, Airflow funcionando!'"]
+[2025-11-20T21:26:42.176+0000] {subprocess.py:86} INFO - Output:
+[2025-11-20T21:26:42.259+0000] {subprocess.py:93} INFO - Olá, Airflow funcionando!
+[2025-11-20T21:26:42.264+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-20T21:26:42.268+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-20T21:26:42.338+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=tutorial_dag, task_id=diga_ola, run_id=manual__2025-11-20T21:26:38.228665+00:00, execution_date=20251120T212638, start_date=20251120T212641, end_date=20251120T212642
+[2025-11-20T21:26:42.414+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-20T21:26:42.454+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-20T21:26:42.459+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
